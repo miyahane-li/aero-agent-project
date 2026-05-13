@@ -11,3 +11,23 @@
 2026-05-13 13:58:21,377 - AeroAgent - INFO - 📖 成功读取: test2.txt
 2026-05-13 13:58:21,377 - AeroAgent - INFO - 📖 成功读取: test1.txt
 2026-05-13 13:58:21,377 - AeroAgent - INFO - 🎯 批量文件读取测试全部通过！
+2026-05-13 14:18:03,974 - AeroAgent - INFO - 🚀 正在请求 API: https://invalid-api-test.com
+2026-05-13 14:18:04,817 - AeroAgent - ERROR - ❌ 请求发生异常: HTTPSConnectionPool(host='invalid-api-test.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='invalid-api-test.com', port=443): Failed to resolve 'invalid-api-test.com' ([Errno -2] Name or service not known)"))
+2026-05-13 14:18:04,819 - AeroAgent - INFO - 🔍 扫描完成，共找到 2 个 .txt 文件
+2026-05-13 14:18:04,819 - AeroAgent - INFO - 📖 成功读取: test2.txt
+2026-05-13 14:18:04,819 - AeroAgent - INFO - 📖 成功读取: test1.txt
+2026-05-13 14:18:04,819 - AeroAgent - INFO - 🎯 批量文件读取测试全部通过！
+2026-05-13 14:22:26,958 - AeroAgent - INFO - 🔍 扫描完成，共找到 2 个 .txt 文件
+2026-05-13 14:22:26,958 - AeroAgent - INFO - 📖 成功读取: test2.txt
+2026-05-13 14:22:26,958 - AeroAgent - INFO - 📖 成功读取: test1.txt
+2026-05-13 14:22:26,958 - AeroAgent - INFO - 🎯 批量文件读取测试全部通过！
+2026-05-13 14:24:12,231 - AeroAgent - INFO - 🚀 正在请求 POST: https://invalid-api-test.com
+2026-05-13 14:24:12,235 - AeroAgent - ERROR - ❌ POST 请求发生异常: HTTPSConnectionPool(host='invalid-api-test.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='invalid-api-test.com', port=443): Failed to resolve 'invalid-api-test.com' ([Errno -2] Name or service not known)"))
+2026-05-13 14:24:12,237 - AeroAgent - INFO - 🔍 扫描完成，共找到 2 个 .txt 文件
+2026-05-13 14:24:12,237 - AeroAgent - INFO - 📖 成功读取: test2.txt
+2026-05-13 14:24:12,237 - AeroAgent - INFO - 📖 成功读取: test1.txt
+2026-05-13 14:24:12,237 - AeroAgent - INFO - 🎯 批量文件读取测试全部通过！
+2026-05-13 14:24:12,238 - AeroAgent - INFO - 🚀 正在请求 GET: https://jsonplaceholder.typicode.com/posts/1
+2026-05-13 14:24:12,891 - AeroAgent - INFO - ✅ GET 响应成功 | 状态码: 200
+2026-05-13 14:24:12,894 - AeroAgent - INFO - 🚀 正在请求 GET: https://this-is-a-wrong-url-12345.com
+2026-05-13 14:24:13,073 - AeroAgent - ERROR - 网络连接错误

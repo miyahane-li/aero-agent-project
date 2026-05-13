@@ -1,0 +1,41 @@
+# 这个流水线的名字，会显示在 GitHub 的 Actions 标签页下
+name: AeroAgent-CI-AutoTest
+
+# 触发条件：当有人向 main 分支执行 push（推送）操作时触发
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  # 定义一个名为 build 的任务
+  build:
+    # 规定机器人使用的操作系统：最新版的 Ubuntu Linux
+    runs-on: ubuntu-latest
+
+    steps:
+    # 第一步：把你的代码从 GitHub 仓库“克隆”到这个虚拟服务器里
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 第二步：给虚拟服务器安装 Python 3.10 环境
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    # 第三步：安装项目依赖（包括 pytest, flake8, black 等）
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt
+
+    # 第四步：代码风格大检查，只要有一行不规范，流水线就会报错
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+    # 第五步：运行我们前几天写的自动化测试用例
+    - name: Run Pytest
+      run: |
+        pytest backend/tests/
