@@ -1,0 +1,2 @@
+2026-05-13 12:52:50,534 - AeroAgent - INFO - 🚀 正在请求 API: https://invalid-api-test.com
+2026-05-13 12:52:50,786 - AeroAgent - ERROR - ❌ 请求发生异常: HTTPSConnectionPool(host='invalid-api-test.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='invalid-api-test.com', port=443): Failed to resolve 'invalid-api-test.com' ([Errno -2] Name or service not known)"))
